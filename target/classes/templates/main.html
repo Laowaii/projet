@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mainpage.css">
+    <title>Page Principale</title>
+</head>
+<body>
+    <ul>
+        <li id="point" th:each="btn: ${btns}">
+            <form th:action="@{index/} + ${btn.name}" th:method="post">
+                <span th:text="${btn.name}"></span>
+                <input id="button" type="submit" value="Voir">
+            </form>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SemWeb</title>
+    </head>
+    <style>
+        /*body {background-color: red;}*/
+        table {
+            margin: auto;
+            margin-top: 5%;
+            border: medium solid #000000;
+            width: 50%;
+        }
+        td, th {
+            border: thin solid #6495ed;
+            margin: 5px;
+            width: 25%;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Heure</th>
+                    <th>Température</th>
+                    <th>Temp ext</th>
+                    <th>Classify</th>
+                </tr>
+            </thead>
+            <tbody>
+                <th:block th:each="triples : ${triples}">
+                <tr>
+                    <td th:text="${triples.heure}"></td>
+                    <td th:text="${triples.temperature}"></td>
+                    <td th:text="${triples.TempExt}"></td>
+                    <td th:text="${triples.alarm}"></td>
+                </tr>
+                </th:block>
+            </tbody>
+        </table>
+    </body>
+</html>
